@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { memo, useEffect, useRef, useState } from 'react';
 import { SendHorizonal } from 'lucide-react';
 
 interface Props {
@@ -7,7 +7,7 @@ interface Props {
   onTyping: (value: boolean) => void;
 }
 
-export function MessageComposer({ disabled, onSend, onTyping }: Props) {
+export const MessageComposer = memo(function MessageComposer({ disabled, onSend, onTyping }: Props) {
   const [value, setValue] = useState('');
   const [sending, setSending] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -51,4 +51,4 @@ export function MessageComposer({ disabled, onSend, onTyping }: Props) {
       <p className="mt-2 text-center text-[11px] text-slate-600">Enter to send · Shift+Enter for a new line</p>
     </div>
   </div>;
-}
+});
