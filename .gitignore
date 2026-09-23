@@ -7,3 +7,4 @@ backend/data/
 *.log
 .DS_Store
 *.tsbuildinfo
+.claude/skills/
