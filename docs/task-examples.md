@@ -14,6 +14,8 @@ Then implement it, run typecheck and build, and report what you checked in
 the browser. Do not change message length validation on the server.
 ```
 
+For the component task above, the agent can use `vercel-react-best-practices` because the change is contained in React.
+
 ## Example 2: trace a bug across layers
 
 ```text
@@ -24,6 +26,8 @@ root cause before editing. Make the smallest fix that addresses it, add a
 meaningful regression test if feasible, run the relevant checks, and report
 the evidence. Keep global chat and other rooms working.
 ```
+
+For a bug involving messages, rooms, presence, typing, or reconnection, ask the agent to use `realtime-chat-feature`.
 
 ## Example 3: update a contract with documentation
 

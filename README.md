@@ -30,9 +30,19 @@ Open `http://localhost:5173`. The Vite frontend proxies API and Socket.IO traffi
 - [docs/development-workflow.md](docs/development-workflow.md): a repeatable process for agent-assisted changes.
 - [docs/testing.md](docs/testing.md): automated checks and a two-browser manual check.
 - [docs/task-examples.md](docs/task-examples.md): sample prompts for the seminar.
+- [docs/skills.md](docs/skills.md): the two repository skills, their provenance, and cross-agent discovery.
+
+## Repository skills
+
+This branch includes two skills under `.agents/skills/`:
+
+- `realtime-chat-feature` is a manually authored workflow for changes that cross the React, Socket.IO, Express, and SQLite layers.
+- `vercel-react-best-practices` was installed from Vercel's public agent skills repository and supplies React performance guidance.
+
+Both use the open `SKILL.md` format. See the [skills guide](docs/skills.md) for how Codex, Freebuff, and Claude Code discover the same instructions.
 
 ## Branches for the seminar
 
-`master` is the working app without Markdown workflow files. `with-agentic-workflow` starts from the same app commit and adds this guidance. Compare the branches to show how an agent can gain project context before making a bounded change.
+`master` is the working app without Markdown workflow files. `with-agentic-workflow` adds project instructions and workflow documents. `with-agentic-workflow-v2` builds on that branch with one manually authored skill and one locally installed skill. Compare the branches to show the progression from source code, to persistent context, to reusable on-demand workflows.
 
 There is no sign-in or access control. Anyone with a room link can join and read its recent history. This app is intended for local teaching, not public deployment.

@@ -2,6 +2,12 @@
 
 This repository is a local teaching app. Keep changes small enough to explain and verify during a seminar. Read [knowledge.md](knowledge.md) before changing behavior and [docs/development-workflow.md](docs/development-workflow.md) for the working sequence.
 
+## Project skills
+
+- Use the `realtime-chat-feature` skill for work that changes Socket.IO rooms, messages, presence, typing, or SQLite-backed history.
+- Use the `vercel-react-best-practices` skill when writing, reviewing, or refactoring React code for performance. Apply only rules relevant to this Vite client; ignore Next.js-specific guidance.
+- Skills are stored in `.agents/skills/` and load on demand. See [docs/skills.md](docs/skills.md) for provenance, portability, and discovery paths.
+
 ## Project boundaries
 
 - `frontend/` is Vite, React, TypeScript, and Tailwind CSS. Keep reusable UI in `frontend/src/components/`, browser helpers in `frontend/src/lib/`, and connection state in `frontend/src/hooks/`.

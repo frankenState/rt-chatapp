@@ -8,7 +8,7 @@ Describe the current behavior, the desired behavior, and what is outside scope. 
 
 ## 2. Give the agent project context
 
-Point the agent to `AGENTS.md`, `knowledge.md`, and the relevant source files. Ask it to inspect the implementation before proposing edits. The source code is authoritative when a document has become stale; update the document as part of the change.
+Point the agent to `AGENTS.md`, `knowledge.md`, and the relevant source files. Ask it to inspect the implementation before proposing edits. For live chat contract changes, ask it to use the `realtime-chat-feature` skill. For React performance work, ask it to use `vercel-react-best-practices`. The source code is authoritative when a document has become stale; update the document as part of the change.
 
 ## 3. Ask for a concrete plan
 
@@ -45,4 +45,4 @@ First give a short plan with files and checks. Then implement it.
 Run the relevant checks from docs/testing.md and report the results.
 ```
 
-For this seminar, begin on `master` to demonstrate discovering the app and writing context files. Compare with `with-agentic-workflow` as a prepared reference. Work on a separate feature branch for each exercise so the baseline remains easy to reset.
+For this seminar, begin on `master` to demonstrate discovering the app and writing context files. Use `with-agentic-workflow` to show persistent repository context, then use `with-agentic-workflow-v2` to show specialized instructions loaded for matching tasks. Work on a separate feature branch for each exercise so the baseline remains easy to reset.
