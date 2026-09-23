@@ -28,7 +28,7 @@ The root uses npm workspaces. In development Vite serves the frontend on port 51
 
 ## Persistent data
 
-SQLite lives at `backend/data/chat.sqlite` by default. `rooms` has `id`, `name`, and `created_at`. The seeded global room has ID `global`; other room IDs are UUIDs. `messages` has `id`, `room_id`, `client_id`, `alias`, `body`, and `created_at`. A foreign key ties each message to a room. New visitors receive the latest 50 messages for that room when they join. The browser holds up to 200 messages during a live session; older history has no pagination UI.
+SQLite lives at `backend/data/chat.sqlite` by default. `rooms` has `id`, `name`, and `created_at`. The seeded global room has ID `global`; other room IDs are UUIDs. `messages` has `id`, `room_id`, `client_id`, `alias`, `body`, and `created_at`. A foreign key ties each message to a room. New visitors receive the latest 50 messages for that room when they join. The browser holds up to 200 messages during a live session; older history has no pagination UI. It also stores metadata for rooms it creates or successfully visits under the versioned `gather-rooms-v1` local storage key, so those rooms remain available in the sidebar after navigation or refresh. This remembered list is a browser convenience, not access control.
 
 Presence and typing are temporary Socket.IO state, not database rows. Online users are distinct guest IDs currently connected to a room. If the same guest opens multiple tabs, the online list shows one entry.
 

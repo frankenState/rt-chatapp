@@ -22,7 +22,7 @@ Use separate browser profiles or an ordinary and a private window so each gets a
 2. Enter different aliases. Confirm both appear in Global chat's online list.
 3. Send a message in one window. Confirm it appears in both windows with the correct author and time.
 4. Type without sending. Confirm the other window shows a typing indicator, then that it disappears.
-5. Create a room and copy its link. Open the link in the second window. Confirm both users appear online in that room.
+5. Create a room and copy its link. Return to Global chat and confirm the room remains in the sidebar and can be reopened. Refresh and confirm it is still listed. Open the copied link in the second window and confirm both users appear online in that room.
 6. Send a room message. Confirm it does not appear in Global chat or another room.
 7. Refresh the room link. Confirm recent room messages return from SQLite and the alias is retained for that browser.
 8. Stop and restart the server. Confirm saved messages remain. Confirm online counts reflect only current connections.
